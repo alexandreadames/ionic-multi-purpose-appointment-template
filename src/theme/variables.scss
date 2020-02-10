@@ -74,4 +74,55 @@
   --ion-color-light-contrast-rgb: 0, 0, 0;
   --ion-color-light-shade: #d7d8da;
   --ion-color-light-tint: #f5f6f9;
+
+  /**CUSTOM*/
+
+  --ion-color-custom-primary: #000000;
+  --ion-color-custom-primary-rgb: 0, 0, 0;
+  --ion-color-custom-primary-contrast: #ffffff;
+  --ion-color-custom-primary-contrast-rgb: 255, 255, 255;
+  --ion-color-custom-primary-shade: #000000;
+  --ion-color-custom-primary-tint: #1a1a1a;
+
+  .ion-color-custom-primary {
+    --ion-color-base: var(--ion-color-custom-primary);
+    --ion-color-base-rgb: var(--ion-color-custom-primary-rgb);
+    --ion-color-contrast: var(--ion-color-custom-primary-contrast);
+    --ion-color-contrast-rgb: var(
+      --ion-color-custom-primary-contrast-rgb
+    );
+    --ion-color-shade: var(--ion-color-custom-primary-shade);
+    --ion-color-tint: var(--ion-color-custom-primary-tint);
+  }
+
+  --ion-color-custom-secondary: #16a0d2;
+  --ion-color-custom-secondary-rgb: 22, 160, 210;
+  --ion-color-custom-secondary-contrast: #ffffff;
+  --ion-color-custom-secondary-contrast-rgb: 255, 255, 255;
+  --ion-color-custom-secondary-shade: #138db9;
+  --ion-color-custom-secondary-tint: #2daad7;
+
+  .ion-color-custom-secondary {
+    --ion-color-base: var(--ion-color-custom-secondary);
+    --ion-color-base-rgb: var(--ion-color-custom-secondary-rgb);
+    --ion-color-contrast: var(--ion-color-custom-secondary-contrast);
+    --ion-color-contrast-rgb: var(
+      --ion-color-custom-secondary-contrast-rgb
+    );
+    --ion-color-shade: var(--ion-color-custom-secondary-shade);
+    --ion-color-tint: var(--ion-color-custom-secondary-tint);
+  }
+
+  /** Tab bar **/
+  --ion-tab-bar-color: var(--ion-color-light);
+  --ion-tab-bar-background: var(--ion-color-custom-primary);
+  /** Tool Bar **/
+  --ion-toolbar-color: var(--ion-color-light);
+  --ion-toolbar-background: var(--ion-color-custom-primary);
+
+  --ion-tab-bar-color-activated: var(--ion-color-custom-secondary);
+
+  //--ion-background-color: var(--ion-color-light-shade);
+  //--ion-backdrop-color: var(--ion-color-light-shade);
+  //--ion-overlay-background-color: var(--ion-color-light-shade);
 }

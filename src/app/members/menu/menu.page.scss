@@ -1,0 +1,14 @@
+ion-list {
+  padding-top: 0px;
+}
+
+.menu_color {
+  background-color: var(
+    --ion-color-custom-secondary-shade
+  ) !important;
+  color: #ffffff;
+}
+
+.menu_icon_color {
+  color: var(--ion-color-custom-secondary-shade) !important;
+}

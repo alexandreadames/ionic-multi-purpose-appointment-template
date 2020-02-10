@@ -1,0 +1,101 @@
+.logoHeader {
+  text-align: center !important;
+  margin-top: 10% !important;
+  img {
+    border-radius: 50%;
+    height: 192px;
+    width: 192px;
+  }
+}
+
+ion-input {
+  background: #fff;
+}
+
+@keyframes animatedBackground {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 100% 0;
+  }
+}
+
+button.login {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.2);
+  background: var(--ion-color-primary) !important;
+  padding: 22px !important;
+  &.activated {
+    background-color: var(--ion-color-primary);
+  }
+}
+button.signup {
+  background-color: white;
+  color: var(--ion-color-primary);
+  border: 3px solid var(--ion-color-primary) !important;
+  padding: 19px !important;
+}
+input,
+select,
+textarea {
+  color: var(--ion-color-primary) !important;
+  text-align: center !important;
+}
+::-webkit-input-placeholder {
+  text-align: center;
+  color: var(--ion-color-primary) !important;
+}
+:-moz-placeholder {
+  /* Firefox 18- */
+  text-align: center;
+  color: var(--ion-color-primary) !important;
+}
+::-moz-placeholder {
+  /* Firefox 19+ */
+  text-align: center;
+  color: var(--ion-color-primary) !important;
+}
+:-ms-input-placeholder {
+  text-align: center;
+  color: var(--ion-color-primary) !important;
+}
+.scroll-content {
+  left: 17px !important;
+  width: 90% !important;
+  margin-top: 10%;
+}
+.input-access-code {
+  border: 3px solid var(--ion-color-primary) !important;
+  text-align: center !important;
+}
+.content-md {
+  background-color: black !important;
+}
+.welcomeHeader {
+  text-align: center;
+  color: var(--ion-color-primary);
+  font-family: "sans-serif";
+}
+.content-ios {
+  background: black !important;
+}
+a {
+  color: var(--ion-color-primary);
+  text-decoration: none !important;
+}
+
+.create_account {
+  text-align: center;
+  padding-top: 8%;
+}
+
+.login
+  disable-hover
+  button
+  button-ios
+  button-default
+  button-default-ios
+  button-block
+  button-block-ios {
+  background-color: var(--ion-color-primary);
+}

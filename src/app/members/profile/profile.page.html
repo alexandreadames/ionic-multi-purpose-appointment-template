@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Meu Perfil</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!--PERFIL-->
+  <ion-card color="light">
+    <ion-card-content text-center>
+      <ion-thumbnail text-center>
+        <!--<ion-spinner *ngif="!profile?.urlFoto"> </ion-spinner>-->
+        <img
+          src="{{ profile?.foto }}"
+          onerror="this.src='assets/img/no_picture.png'"
+        />
+      </ion-thumbnail>
+
+      <ion-card-title text-center>
+        <strong>{{ profile?.nome }}</strong>
+        <p>{{ profile?.email }}</p>
+        <p>{{ profile?.telefone }}</p>
+      </ion-card-title>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

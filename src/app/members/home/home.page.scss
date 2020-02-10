@@ -1,0 +1,29 @@
+.verticalLineActive {
+  width: 2%;
+  height: 50px;
+  background: green;
+  margin: auto;
+  margin-top: 0;
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 25px;
+  vertical-align: middle;
+}
+
+.verticalLineCancelled {
+  width: 2%;
+  height: 50px;
+  background: red;
+  margin: auto;
+  margin-top: 0;
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-radius: 25px;
+  vertical-align: middle;
+}
+
+.margin {
+  margin-top: 10px;
+}
