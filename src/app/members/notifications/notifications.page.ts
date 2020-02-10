@@ -1,32 +1,27 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-notifications',
-  templateUrl: './notifications.page.html',
-  styleUrls: ['./notifications.page.scss'],
+  selector: "app-notifications",
+  templateUrl: "./notifications.page.html",
+  styleUrls: ["./notifications.page.scss"]
 })
 export class NotificationsPage implements OnInit {
   notifications = [
     {
       id: 1,
-      name: 'Prof. Selma',
-      date: '31/01/2020',
-      text: 'Não haverá aula dia 04/02',
-      image: `https://i.picsum.photos/id/${this.random(
-        1,
-        50,
-      )}/200/200.jpg`,
+      name: "Teacher Selma",
+      date: "31/01/2020",
+      text:
+        "It is my duty to announce... that there is no dessert here tonight.",
+      image: `https://i.picsum.photos/id/497/200/200.jpg`
     },
     {
       id: 2,
-      name: 'Prof. Leandro',
-      date: '31/01/2020',
-      text: 'Não haverá aula dia 13/02',
-      image: `https://i.picsum.photos/id/${this.random(
-        1,
-        50,
-      )}/200/200.jpg`,
-    },
+      name: "Teacher Leandro",
+      date: "31/01/2020",
+      text: "There's no yoga class today",
+      image: `https://i.picsum.photos/id/447/200/200.jpg`
+    }
   ];
 
   constructor() {}

@@ -3,7 +3,7 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>Agenda</ion-title>
+    <ion-title>Book An Appointment</ion-title>
   </ion-toolbar>
 </ion-header>
 
@@ -24,46 +24,7 @@
   </ion-row>
 
   <div>
-    <!--
-      <ion-grid class="card-grid">
-        <ion-row>
-          <ion-col
-            size="4"
-            tappable
-            *ngFor="let hour of hours"
-            [ngClass]="{'active': hour == hourActive}"
-            (click)="checkHour(hour)"
-          >
-            <ion-card mode="ios" class="ion-no-margin">
-              <ion-card-content class="ion-text-center">
-                {{ hour }}
-              </ion-card-content>
-            </ion-card>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-  
-      <ion-button
-        mode="ios"
-        expand="block"
-        color="tertiary"
-        (click)="next()"
-      >
-        Next
-      </ion-button>-->
-
     <ion-list lines="none">
-      <!--<ion-item-sliding *ngFor="let da of day_appointments">
-          <ion-item>
-            <ion-label>
-              <h2>{{da.schedule.resource.name}}</h2>
-              <p>{{da.schedule.resource.professional}}</p>
-            </ion-label>
-            <ion-note slot="end">
-              {{da.schedule.start_hour}}
-            </ion-note>
-          </ion-item>-->
-
       <ion-item *ngFor="let ds of day_schedules">
         <span item-start style="width:50px;">{{ds.start_hour}}</span>
         <div
@@ -71,10 +32,9 @@
         ></div>
 
         <ion-label>
-          <h2 *ngIf="ds.status==1">Disponível</h2>
-          <h2 *ngIf="ds.status==2">Indisponível</h2>
-          <h2 *ngIf="ds.status==3">Agendado</h2>
-          <!--<p>{{da.schedule.resource.professional}}</p>-->
+          <h2 *ngIf="ds.status==1">Available</h2>
+          <h2 *ngIf="ds.status==2">Unavailable</h2>
+          <h2 *ngIf="ds.status==3">Scheduled</h2>
         </ion-label>
 
         <ion-button
@@ -84,27 +44,9 @@
           (click)="presentScheduleConfirm(ds)"
         >
           <ion-icon name="calendar" slot="start"></ion-icon>
-          Agendar
+          Schedule
         </ion-button>
-        <!--
-        <ion-button
-          *ngIf="da.cancelled"
-          disabled="true"
-          slot="end"
-          color="danger"
-        >
-          <ion-icon name="close" slot="start"></ion-icon>
-          Cancelado
-        </ion-button>-->
       </ion-item>
-      <!--
-          <ion-item-options>
-            <ion-item-option color="danger" (click)="cancel(da)">
-              <ion-icon slot="start" name="close"></ion-icon>
-              Cancelar Aula
-            </ion-item-option>
-          </ion-item-options>
-        </ion-item-sliding>-->
     </ion-list>
   </div>
 </ion-content>

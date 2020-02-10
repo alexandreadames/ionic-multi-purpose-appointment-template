@@ -1,32 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-resources',
-  templateUrl: './resources.page.html',
-  styleUrls: ['./resources.page.scss'],
+  selector: "app-resources",
+  templateUrl: "./resources.page.html",
+  styleUrls: ["./resources.page.scss"]
 })
 export class ResourcesPage implements OnInit {
   resources = [
     {
       id: 1,
-      resource_type: 'Aula',
-      name: 'Aula de Pilates',
-      teacher: 'Prof. Selma',
-      image: `https://i.picsum.photos/id/${this.random(
-        1,
-        50,
-      )}/200/200.jpg`,
+      resource_type: "Class",
+      name: "Pilates Class",
+      teacher: "Teacher Selma",
+      image: `https://i.picsum.photos/id/497/200/200.jpg`
     },
     {
       id: 2,
-      resource_type: 'Aula',
-      name: 'Aula de Yoga',
-      teacher: 'Prof. Leandro',
-      image: `https://i.picsum.photos/id/${this.random(
-        1,
-        50,
-      )}/200/200.jpg`,
-    },
+      resource_type: "Class",
+      name: "Yoga Class",
+      teacher: "Teacher. Leandro",
+      image: `https://i.picsum.photos/id/447/200/200.jpg`
+    }
   ];
 
   constructor() {}

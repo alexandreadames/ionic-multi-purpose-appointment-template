@@ -8,30 +8,22 @@
   <ion-list lines="none">
     <!--Ensino-->
     <ion-item-divider class="menu_color">
-      <ion-label>Agendamento</ion-label>
+      <ion-label>Appointment</ion-label>
     </ion-item-divider>
 
     <ion-item routerLink="/resources">
-      <ion-icon
-        src="/assets/icon/calendar.svg"
-        slot="start"
-        class="menu_icon_color"
-      ></ion-icon>
-      <ion-label>Agendar Aula</ion-label>
+      <ion-icon name="calendar" slot="start" class="menu_icon_color"></ion-icon>
+      <ion-label>Book an appointment</ion-label>
     </ion-item>
 
     <ion-item routerLink="/dashboard/home">
-      <ion-icon
-        name="time"
-        slot="start"
-        class="menu_icon_color"
-      ></ion-icon>
-      <ion-label>Meus Horários</ion-label>
+      <ion-icon name="time" slot="start" class="menu_icon_color"></ion-icon>
+      <ion-label>My Appointments</ion-label>
     </ion-item>
 
     <!--Notificações-->
     <ion-item-divider class="menu_color">
-      <ion-label>Notificações</ion-label>
+      <ion-label>Notifications</ion-label>
     </ion-item-divider>
 
     <ion-item routerLink="/notifications">
@@ -40,16 +32,12 @@
         slot="start"
         class="menu_icon_color"
       ></ion-icon>
-      <ion-label>Notificações</ion-label>
+      <ion-label>Notifications</ion-label>
     </ion-item>
 
     <ion-item (click)="logout()">
-      <ion-icon
-        slot="start"
-        name="log-out"
-        class="menu_icon_color"
-      ></ion-icon>
-      <ion-label>Sair</ion-label>
+      <ion-icon slot="start" name="log-out" class="menu_icon_color"></ion-icon>
+      <ion-label>Log out</ion-label>
     </ion-item>
   </ion-list>
 </ion-content>

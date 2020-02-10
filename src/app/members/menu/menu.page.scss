@@ -3,12 +3,10 @@ ion-list {
 }
 
 .menu_color {
-  background-color: var(
-    --ion-color-custom-secondary-shade
-  ) !important;
+  background-color: var(--ion-color-tertiary-shade) !important;
   color: #ffffff;
 }
 
 .menu_icon_color {
-  color: var(--ion-color-custom-secondary-shade) !important;
+  color: var(--ion-color-tertiary-shade) !important;
 }

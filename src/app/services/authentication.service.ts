@@ -1,31 +1,30 @@
-import { Platform } from '@ionic/angular';
-import { Injectable } from '@angular/core';
-import { Storage } from '@ionic/storage';
-import { BehaviorSubject, Observable } from 'rxjs';
- 
-const TOKEN_KEY = 'auth-token';
- 
+import { Platform } from "@ionic/angular";
+import { Injectable } from "@angular/core";
+import { Storage } from "@ionic/storage";
+import { BehaviorSubject, Observable } from "rxjs";
+
+const TOKEN_KEY = "auth-token";
+
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root"
 })
 export class AuthenticationService {
- 
   authenticationState = new BehaviorSubject(false);
- 
-  constructor(private storage: Storage, private plt: Platform) { 
+
+  constructor(private storage: Storage, private plt: Platform) {
     this.plt.ready().then(() => {
       this.checkToken();
     });
   }
- 
+
   checkToken() {
     this.storage.get(TOKEN_KEY).then(res => {
       if (res) {
         this.authenticationState.next(true);
       }
-    })
+    });
   }
- 
+
   /*login() {
     return this.storage.set(TOKEN_KEY, 'Bearer 1234567').then(() => {
       this.authenticationState.next(true);
@@ -50,7 +49,7 @@ export class AuthenticationService {
 
       this.http.post(LOGIN_URL, body, httpOptions).subscribe((data: any) => {
         /**Verificar se login foi bem sucedido */
-        /*if (data.token) {
+      /*if (data.token) {
           //Cadastrar Dispositivo
           this.cadastrarDispositivo();
 
@@ -70,32 +69,28 @@ export class AuthenticationService {
         }
       });
     });*/
-    /**For login test... */
-    if (credentials.login === 'corestudio' && credentials.password === 'studio10'){
+      /**For login test... */
+      if (credentials.login === "demo" && credentials.password === "demo") {
+        this.storage.set(TOKEN_KEY, "Bearer 1234567").then(() => {
+          this.authenticationState.next(true);
+        });
 
-      this.storage.set(TOKEN_KEY, 'Bearer 1234567').then(() => {
-        this.authenticationState.next(true);
-      });
-
-      observer.next(true);
-      observer.complete();
-
-    }
-    else{
-      observer.error(false);
-      observer.complete();
-    }
-  });
+        observer.next(true);
+        observer.complete();
+      } else {
+        observer.error(false);
+        observer.complete();
+      }
+    });
   }
- 
+
   logout() {
     return this.storage.remove(TOKEN_KEY).then(() => {
       this.authenticationState.next(false);
     });
   }
- 
+
   isAuthenticated() {
     return this.authenticationState.value;
   }
- 
 }
