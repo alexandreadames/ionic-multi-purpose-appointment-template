@@ -20,6 +20,7 @@ mapboxgl.accessToken = "<PUT_YOUR_MAP_BOX_ACCESS_TOKEN_HERE>";
 
 Demo:
 https://ionic-multipurpose-appointment.firebaseapp.com
+
 user: demo
 
 password: demo
