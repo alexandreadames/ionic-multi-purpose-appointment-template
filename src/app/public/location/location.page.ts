@@ -1,18 +1,13 @@
-import {
-  Component,
-  OnInit,
-  ViewChild,
-  ElementRef,
-} from '@angular/core';
-import mapboxgl from 'mapbox-gl';
+import { Component, OnInit, ViewChild, ElementRef } from "@angular/core";
+import mapboxgl from "mapbox-gl";
 
 @Component({
-  selector: 'app-location',
-  templateUrl: './location.page.html',
-  styleUrls: ['./location.page.scss'],
+  selector: "app-location",
+  templateUrl: "./location.page.html",
+  styleUrls: ["./location.page.scss"]
 })
 export class LocationPage implements OnInit {
-  @ViewChild('map', { static: false }) mapElement; //ElementRef<HTMLElement, any>;
+  @ViewChild("map", { static: false }) mapElement; //ElementRef<HTMLElement, any>;
   map: any;
 
   constructor() {}
@@ -26,13 +21,12 @@ export class LocationPage implements OnInit {
   loadMap() {
     /*Initializing Map*/
 
-    mapboxgl.accessToken =
-      'pk.eyJ1IjoiYWxleGFuZHJlYWRhbWVzIiwiYSI6ImNrMGljdGRmbjA2NmszY25vM3JhbnB4dWQifQ.ofVWlGLQCe5WPwhgSDrIUA';
+    mapboxgl.accessToken = "<PUT_YOUR_MAP_BOX_ACCESS_TOKEN_HERE>";
     this.map = new mapboxgl.Map({
       container: this.mapElement.nativeElement,
-      style: 'mapbox://styles/mapbox/streets-v11',
+      style: "mapbox://styles/mapbox/streets-v11",
       center: [-37.335851, -5.209759],
-      zoom: 18,
+      zoom: 18
     });
 
     /*let el = document.createElement('div');
@@ -44,11 +38,11 @@ export class LocationPage implements OnInit {
       .addTo(this.map);*/
     let popup = new mapboxgl.Popup({ closeOnClick: false })
       .setLngLat([-37.335851, -5.209759])
-      .setHTML('<h1>Core Studio</h1>')
+      .setHTML("<h1>Core Studio</h1>")
       .addTo(this.map);
 
     let marker = new mapboxgl.Marker({
-      draggable: false,
+      draggable: false
     })
       .setLngLat([-37.335851, -5.209759])
       .setPopup(popup)

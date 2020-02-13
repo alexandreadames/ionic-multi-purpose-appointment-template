@@ -12,11 +12,16 @@ cd ionic-multi-purpose-appointment-template/
 npm i
 
 ionic serve
+
+For use Map:
+Open app/public/location/location.page.ts and set your mapbox token in
+mapboxgl.accessToken = "<PUT_YOUR_MAP_BOX_ACCESS_TOKEN_HERE>";
 ```
 
 Demo:
 https://ionic-multipurpose-appointment.firebaseapp.com
 user: demo
+
 password: demo
 
 ### Donations
